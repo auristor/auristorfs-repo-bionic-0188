@@ -1,0 +1,41 @@
+=head1 NAME
+
+auristor-repo-bionic - Auristor Server Repo Setup
+
+=head1 DESCRIPTION
+
+The auristor-repo-bionic sets up the apt configuration to enable access to
+Auristor Server Repository.  The repository is not publically accessible
+and requires a special APT/SSL configuration.  This package installs
+everything required with the exception of the specific user certificates.
+
+=head1 POST INSTALL ACTIONS
+
+=head2 Install SSL Certificate and Key
+
+The SSL certificate and key obtained from Auristor must be installed
+in the following locations:
+
+     /etc/apt/ssl/auristor.cert.pem
+     /etc/apt/ssl/auristor.key.pem
+
+=head2 Install Packages
+
+Once the Auristor certificate and key have been installed then normal
+apt procedures can be used to install the server packages.  For example
+to install all server packages on a standalone server the following
+commands would be used:
+
+     apt update
+     apt install auristorfs-doc \
+         auristorfs-dbserver \
+         auristorfs-fileserver \
+         auristorfs-server
+
+Note: if the "apt update" command fails to pull a package list from the
+Auristor server the subsequent apt command will also fail.
+
+=head1 COPYRIGHT
+
+This software was developed by Auristor, Inc.
+2019 All rights reserved.

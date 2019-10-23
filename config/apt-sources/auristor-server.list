@@ -1,0 +1,3 @@
+# Auristor server repository
+#
+deb [arch=amd64] https://server-rpm-repo.auristor.com/filesystem/repo/v0.188/bionic/ bionic server

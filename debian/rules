@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+PACKAGE := $(shell dh_listpackages)
+VERSION := $(shell dpkg-parsechangelog | grep ^Version: | cut -d' ' -f2 \
+                | cut -d- -f1)
+%:
+	dh $@
+
+override_dh_auto_install:
+	mkdir -p debian/$(PACKAGE)/usr/share/man/man8
+	set -e; for pod in `ls docs` ; do \
+	    pod2man --release=$(VERSION) --section 8 \
+		--center=$(PACKAGE) docs/$${pod} \
+		> debian/$(PACKAGE)/usr/share/man/man8/$$pod.8 ; \
+	done

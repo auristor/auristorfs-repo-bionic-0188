@@ -1,0 +1,14 @@
+Source: auristorfs-repo-bionic-0188
+Section: net
+Priority: optional
+Maintainer: Bill MacAllister <bill@ca-zephyr.org>
+Build-Depends: debhelper (>= 12), perl-doc
+Standards-Version: 4.1.2
+
+Package: auristorfs-repo-bionic-0188
+Architecture: all
+Depends: ${misc:Depends}
+Provides: auristorfs-repo-bionic-0188
+Description: Auristor Server Repository setup
+ This package installs the basic structure required to access the
+ Auristor server repository.

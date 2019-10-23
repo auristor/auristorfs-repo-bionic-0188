@@ -1,0 +1,6 @@
+auristorfs-repo-bionic-0188 (0.188) unstable; urgency=low
+
+  * Initial packaging of the configuration for accessing the Auristor
+    server repository.
+
+ -- Bill MacAllister <bill@ca-zephyr.org>  Wed, 23 Oct 2019 05:47:43 +0000

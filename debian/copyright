@@ -1,0 +1,10 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Auristor
+Upstream-Contact: Auristor, Inc. <info@auristor.com>
+
+Files: *
+Copyright: 2019 Auristor, Inc.
+License: Auristor
+
+License: Auristor
+  All Rights Reserved.

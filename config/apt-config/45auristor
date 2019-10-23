@@ -1,0 +1,12 @@
+# file: /etc/apt/apt.conf.d/45auristor
+#
+#Debug::Acquire::https "true";
+#
+Acquire::https::server-rpm-repo.auristor.com {
+  Verify-Peer "false";
+  Verify-Host "true";
+
+  CaInfo "/etc/apt/ssl/auristor-ca.cert.pem";
+  SslCert "/etc/apt/ssl/auristor.cert.pem";
+  SslKey "/etc/apt/ssl/auristor.key.pem";
+};
